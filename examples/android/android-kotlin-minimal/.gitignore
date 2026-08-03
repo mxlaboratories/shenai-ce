@@ -1,0 +1,14 @@
+.gradle/
+build/
+/libs/*.aar
+!/libs/.gitkeep
+/src/main/kotlin/ai/mxlabs/shenai/ce/androidkotlin/minimal/CeConfig.kt
+local.properties
+captures/
+.cxx/
+.externalNativeBuild/
+.idea/
+*.jks
+*.keystore
+*.p12
+.DS_Store

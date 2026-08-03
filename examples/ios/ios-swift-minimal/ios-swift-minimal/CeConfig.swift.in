@@ -1,0 +1,5 @@
+enum CeConfig {
+    static let apiKey = "SHENAI_API_KEY_VALUE"
+    static let userId = "SHENAI_USER_ID_VALUE"
+    static let language = "SHENAI_LANGUAGE_VALUE"
+}

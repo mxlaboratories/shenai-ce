@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>Shen.AI (CE) JS Minimal</title>
+    <script type="module">
+      import CreateShenaiSDK from "./shenai-sdk/index.mjs"
+
+      const params = new URLSearchParams(window.location.search)
+      const apiKey = params.get("apiKey") || ""
+      const userId = params.get("userId") || "ce-js-minimal-example"
+      const language = params.get("language") || "en"
+      const status = document.getElementById("status")
+
+      const shenai = await CreateShenaiSDK({ enablePreloadDisplay: true })
+      window.shenai = shenai
+
+      if (!apiKey) {
+        status.textContent = "Missing apiKey"
+      } else {
+        shenai.initialize(
+          apiKey,
+          userId,
+          {
+            initializationMode: shenai.InitializationMode.MEASUREMENT,
+            language
+          },
+          result => {
+            if (result === shenai.InitializationResult.OK) {
+              status.hidden = true
+            } else {
+              status.textContent = `Initialization failed: ${result}`
+            }
+          }
+        )
+      }
+
+      window.addEventListener("beforeunload", () => {
+        if (shenai.isInitialized()) {
+          shenai.deinitialize()
+        }
+      })
+
+      function setFullViewportHeight() {
+        const vh = window.innerHeight * 0.01
+        document.documentElement.style.setProperty("--vh", `${vh}px`)
+      }
+
+      if (/Android/.test(navigator.userAgent) && /Chrome\/\d+/.test(navigator.userAgent)) {
+        window.addEventListener("resize", setFullViewportHeight)
+        document.addEventListener("DOMContentLoaded", setFullViewportHeight)
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .wrapper {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @supports (-webkit-touch-callout: none) {
+        .wrapper {
+          height: -webkit-fill-available;
+        }
+      }
+
+      #mxcanvas {
+        aspect-ratio: 480/894;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      @supports (-webkit-touch-callout: none) {
+        #mxcanvas {
+          max-height: -webkit-fill-available;
+        }
+      }
+
+      @media (max-aspect-ratio: 480/894) {
+        #mxcanvas {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @media (min-aspect-ratio: 480/894) {
+        #mxcanvas {
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      #status {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        padding: 10px 12px;
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.72);
+        border-radius: 8px;
+        font:
+          14px system-ui,
+          sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <canvas id="mxcanvas"></canvas>
+      <div id="status">Loading SDK</div>
+    </div>
+  </body>
+</html>

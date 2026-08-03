@@ -1,0 +1,10 @@
+package ai.mxlabs.shenai.ce.androidjava.minimal;
+
+final class CeConfig {
+    static final String API_KEY = "SHENAI_API_KEY_VALUE";
+    static final String USER_ID = "SHENAI_USER_ID_VALUE";
+    static final String LANGUAGE = "SHENAI_LANGUAGE_VALUE";
+
+    private CeConfig() {
+    }
+}

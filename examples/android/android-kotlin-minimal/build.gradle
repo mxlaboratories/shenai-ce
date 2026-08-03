@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application' version '8.12.1'
+    id 'org.jetbrains.kotlin.android' version '1.9.24'
+}
+
+android {
+    namespace 'ai.mxlabs.shenai.ce.androidkotlin.minimal'
+    compileSdk 35
+    buildToolsVersion '36.0.0'
+
+    defaultConfig {
+        applicationId 'ai.mxlabs.shenai.ce.androidkotlin.minimal'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'androidx.activity:activity:1.6.1'
+    implementation 'androidx.fragment:fragment:1.5.5'
+    implementation files('libs/shenai_sdk.aar')
+}

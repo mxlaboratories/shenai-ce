@@ -1,0 +1,26 @@
+.idea/
+node_modules/
+.vscode/
+*.map
+.DS_Store
+.sourcemaps
+dist/
+capacitor-shenai-sdk
+package-lock.json
+yarn.lock
+
+# Signing credentials
+*.jks
+*.keystore
+*.p12
+*.mobileprovision
+*.provisionprofile
+
+ios/App/Pods/
+ios/App/Podfile.lock
+ios/App/LocalSigning.xcconfig
+ios/App/App/public/
+ios/App/App/capacitor.config.json
+android/.gradle/
+android/app/build/
+android/app/src/main/assets/public/
