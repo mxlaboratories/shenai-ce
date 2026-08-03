@@ -1,0 +1,31 @@
+{
+  "name": "shenai-ce-react-native-minimal-example",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.73.6",
+    "react-native-shenai-sdk": "file:./react-native-shenai-sdk"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@react-native/babel-preset": "0.73.21",
+    "@react-native/eslint-config": "0.73.2",
+    "@react-native/metro-config": "0.73.5",
+    "@react-native/typescript-config": "0.73.1",
+    "@types/react": "^18.2.67",
+    "@types/react-test-renderer": "^18.0.7",
+    "react-test-renderer": "18.2.0",
+    "typescript": "5.1.6"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

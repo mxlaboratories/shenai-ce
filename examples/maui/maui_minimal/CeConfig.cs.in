@@ -1,0 +1,8 @@
+namespace Shenai.Ce.Maui.Minimal;
+
+internal static class CeConfig
+{
+    public const string ApiKey = "SHENAI_API_KEY_VALUE";
+    public const string UserId = "SHENAI_USER_ID_VALUE";
+    public const string Language = "SHENAI_LANGUAGE_VALUE";
+}

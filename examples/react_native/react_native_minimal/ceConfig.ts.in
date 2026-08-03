@@ -1,0 +1,3 @@
+export const apiKey = "SHENAI_API_KEY_VALUE"
+export const userId = "SHENAI_USER_ID_VALUE"
+export const language = "SHENAI_LANGUAGE_VALUE"

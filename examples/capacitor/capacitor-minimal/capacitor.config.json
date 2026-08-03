@@ -1,0 +1,10 @@
+{
+  "appId": "ai.mxlabs.shenai.ce.capacitor.minimal",
+  "appName": "Shen.AI (CE)",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

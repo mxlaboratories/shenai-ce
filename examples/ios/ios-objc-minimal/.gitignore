@@ -1,0 +1,8 @@
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+/ios-objc-minimal/CeConfig.h
+/ios-objc-minimal/ShenaiSDK.framework
+/ios-objc-minimal/ShenaiSDK.xcframework

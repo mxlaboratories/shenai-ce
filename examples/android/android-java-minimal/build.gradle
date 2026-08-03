@@ -1,0 +1,24 @@
+plugins {
+    id 'com.android.application' version '8.12.1'
+}
+
+android {
+    namespace 'ai.mxlabs.shenai.ce.androidjava.minimal'
+    compileSdk 35
+    buildToolsVersion '36.0.0'
+
+    defaultConfig {
+        applicationId 'ai.mxlabs.shenai.ce.androidjava.minimal'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+}
+
+dependencies {
+    implementation 'androidx.activity:activity:1.6.1'
+    implementation 'androidx.core:core:1.9.0'
+    implementation 'androidx.fragment:fragment:1.5.5'
+    implementation files('libs/shenai_sdk.aar')
+}

@@ -1,0 +1,24 @@
+name: shenai_ce_flutter_minimal_example
+description: Minimal Flutter example for the Shen.AI (CE) SDK.
+version: 0.0.0
+
+publish_to: "none"
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shenai_sdk:
+    # Extract the Shen.AI (CE) Flutter SDK here or run the launcher script
+    # with --sdk-path to prepare this path.
+    path: ./shenai_sdk
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 5.0.0
+
+flutter:
+  uses-material-design: true

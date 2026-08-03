@@ -1,0 +1,10 @@
+{
+  "name": "shenai-ce-js-minimal-example",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf build && mkdir -p build/shenai-sdk && cp index.html build/index.html && cp shenai-sdk/index.mjs shenai-sdk/index.d.ts shenai-sdk/shenai_sdk.mjs shenai-sdk/shenai_sdk.wasm build/shenai-sdk/ && cp -R shenai-sdk/util shenai-sdk/enums build/shenai-sdk/",
+    "serve": "node scripts/serve.mjs build",
+    "start": "npm run build && npm run serve"
+  }
+}
