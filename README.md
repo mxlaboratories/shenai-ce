@@ -19,7 +19,7 @@ To run these examples, you need:
 
 For SDK documentation, visit the Shen.AI Developer Portal:
 
-- [developer.shen.ai/clinical](https://developer.shen.ai/clinical)
+- [developer.shen.ai/ce](https://developer.shen.ai/ce)
 
 ## Available Examples
 
